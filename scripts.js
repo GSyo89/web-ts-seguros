@@ -37,3 +37,47 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Array de testimonios
+const testimonios = [
+  {
+    nombre: "Juan Pérez",
+    descripcion: "Cliente satisfecho",
+    imagen: "https://via.placeholder.com/100",
+    texto: "Excelente servicio, siempre atentos a mis necesidades. Me ayudaron a encontrar el mejor seguro para mi auto. ¡Totalmente recomendados!"
+  },
+  {
+    nombre: "Maria López",
+    descripcion: "Cliente satisfecha",
+    imagen: "https://via.placeholder.com/100",
+    texto: "Gracias a su asesoramiento, pude asegurar mi casa con una excelente cobertura. Estoy tranquilo sabiendo que está protegida."
+  },
+  {
+    nombre: "Carlos Díaz",
+    descripcion: "Cliente satisfecho",
+    imagen: "https://via.placeholder.com/100",
+    texto: "Me ayudaron a elegir el seguro de moto perfecto. Muy profesionales y con gran conocimiento en el área."
+  }
+];
+
+// Renderizador de testimonios
+function mostrarTestimonios() {
+  const contenedor = document.getElementById('testimonial-cards');
+
+  testimonios.forEach(testimonio => {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card';
+
+    card.innerHTML = `
+      <img src="${testimonio.imagen}" alt="${testimonio.nombre}">
+      <p>"${testimonio.texto}"</p>
+      <h3>${testimonio.nombre}</h3>
+      <p>${testimonio.descripcion}</p>
+    `;
+
+    contenedor.appendChild(card);
+  });
+}
+
+// Ejecutar al cargar
+document.addEventListener('DOMContentLoaded', mostrarTestimonios);
