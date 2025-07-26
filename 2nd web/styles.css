@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #1e3a8a;
+  color: white;
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #fbbf24;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  background-color: #25d366;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+/* Contenido principal */
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px;
+  background-color: #f5f7fa;
+}
+
+.content section {
+  margin-bottom: 60px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #1e3a8a;
+  padding-bottom: 8px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .sidebar ul li {
+    margin-bottom: 0;
+  }
+
+  .content {
+    padding: 20px;
+  }
+}
+
+/* Mostrar solo boton en mobile*/
+
+#menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block;
+  }
+
+  .sidebar ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar.open ul {
+    display: flex;
+  }
+}
+
+/*Llamar si estas en mobile */
+
+.btn-call, .btn-whatsapp {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-call {
+  background-color: #0b84a5;
+}
+
+.btn-call:hover {
+  background-color: #066777;
+}

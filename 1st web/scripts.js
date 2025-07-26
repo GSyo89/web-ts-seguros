@@ -24,19 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// hidden navbar 
-document.addEventListener('DOMContentLoaded', function () {
-  const navbar = document.querySelector('.navbar');
-  const header = document.querySelector('#main-header');
+// // hidden navbar 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const navbar = document.querySelector('.navbar');
+//   const header = document.querySelector('#main-header');
 
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 100) {
-      navbar.classList.remove('hidden-navbar');
-    } else {
-      navbar.classList.add('hidden-navbar');
-    }
-  });
-});
+//   window.addEventListener('scroll', function () {
+//     if (window.scrollY > 100) {
+//       navbar.classList.remove('hidden-navbar');
+//     } else {
+//       navbar.classList.add('hidden-navbar');
+//     }
+//   });
+// });
 
 // Array de testimonios
 const testimonios = [
