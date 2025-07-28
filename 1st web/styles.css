@@ -171,6 +171,10 @@ p {
   font-style: italic;
 }
 
+.contact p {
+  color: black;
+}
+
 @media (max-width: 768px) {
   .service-cards {
     grid-template-columns: 1fr;
